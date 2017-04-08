@@ -30,8 +30,9 @@ font pango:monospace 8
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-#Background Image
-exec --no startup-id feh --bg-fill "/home/kaoz/Pictures/Wallpapers/ArchWp.png"
+#Background Image wallpaper.py changes it every 5 minutes
+#exec_always --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers/*
+exec_always --no-startup-id python2 ~/.config/i3/wallpaper.py
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
@@ -198,3 +199,5 @@ bar {
 new_window pixel 1
 new_float pixel 1
 hide_edge_borders smart
+
+
